@@ -2,6 +2,10 @@
 
 TaskMaster is a simple yet powerful TODO application built using HTML, CSS, and JavaScript. It allows users to manage their tasks efficiently while enjoying a customizable experience with different color themes. The app displays the current day and date, enabling users to stay organized and motivated.
 
+## Live Demo
+
+🔴 [Live Demo]()
+
 ## Table of Contents
 
 - **Features**
@@ -105,5 +109,5 @@ To run TaskMaster locally, follow these steps:
 
 - **Gmail:** sudhanshujha164@gmail.com
 
-- **GitHub:** [Sudhanshu Jha(https://github.com/sudhanshu-j)]
+- **GitHub:** [Sudhanshu Jha](https://github.com/sudhanshu-j)
 
