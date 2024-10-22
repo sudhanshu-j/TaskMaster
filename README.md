@@ -38,12 +38,10 @@ To run TaskMaster locally, follow these steps:
 
 1. **Clone the repository:**
 
-    ```bash
 - git clone https://github.com/yourusername/TaskMaster.git
 
 3. **Navigate to the Directory:**
 
-    ```bash
 - cd taskmaster
 
 3. **Open the HTML file:** Open index.html in your favorite web browser.
