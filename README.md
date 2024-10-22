@@ -37,12 +37,14 @@ TaskMaster is a simple yet powerful TODO application built using HTML, CSS, and 
 To run TaskMaster locally, follow these steps:
 
 1. **Clone the repository:**
-   ```bash
-git clone https://github.com/yourusername/TaskMaster.git
 
-2. **Navigate to the Directory:**
-   ```bash
-cd taskmaster
+    ```bash
+- git clone https://github.com/yourusername/TaskMaster.git
+
+3. **Navigate to the Directory:**
+
+    ```bash
+- cd taskmaster
 
 3. **Open the HTML file:** Open index.html in your favorite web browser.
 
@@ -68,7 +70,7 @@ cd taskmaster
 
    - TaskMaster comes with 10 different color themes. You can customize the look and feel of the app by selecting your preferred theme from the theme dropdown menu.
 
-## CSS Variables
+- **CSS Variables**
 
    - If you want to create your own theme, you can modify the CSS variables defined in styles.css. Look for the .theme class in the CSS file and adjust the properties as desired.
 
