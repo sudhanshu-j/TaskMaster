@@ -1,0 +1,1066 @@
+/* Google Fonts */
+
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+
+:root {
+  /**
+   * Colors
+   * 
+   * Define a set of colors used throughout the application
+   * These colors can be used by applying the corresponding CSS variable
+   */
+
+  --granite-gray: #5d5e5f; /* A dark gray color */
+  --eerie-black: #1b1b1d; /* A very dark gray, almost black color */
+  --slimy-green: #4a9900; /* A bright, vibrant green color */
+  --fuzzy-wuzzy: #bf6363; /* A medium gray color with a slight brown tint */
+
+  --davys-gray: #464749; /* A dark gray color with a slight blue tint */
+
+  --cultured-1: #edeef2; /* A light gray color with a slight blue tint */
+
+  --cultured-2: #f5f5f5; /* A very light gray color */
+  --dim-gray: #68686a; /* A medium dark gray color */
+  --white_80: #ffffffcc; /* White with 80% opacity */
+  --white_70: #ffffffb3; /* White with 70% opacity */
+  --white_40: #ffffff66; /* White with 40% opacity */
+  --white_10: #ffffff1a; /* White with 10% opacity */
+  --black_05: #0000000d; /* Black with 5% opacity */
+  --black_50: #00000080; /* Black with 50% opacity */
+  --black_25: #00000040; /* Black with 25% opacity */
+  --white-2: #fafafa; /* A very light gray color, almost white */
+  --white-1: #ffffff; /* Pure white */
+  --black: #000000; /* Pure black */
+
+  /**
+   * Theme Colors
+   * 
+   * Define colors used for the application's theme
+   * These colors are used to create a consistent visual identity
+   */
+
+  --hue: 31; /* The hue value used for the theme colors */
+  --theme-bg: linear-gradient(
+    to bottom,
+    hsl(var(--hue, 31), 55%, 56%),
+    hsl(var(--hue, 31), 89%, 57%)
+  ); /* A linear gradient used as the background for the theme */
+  --theme-color: #dc7d1d; /* The primary color used for the theme */
+
+  /**
+   * Typography
+   * 
+   * Define font families and font sizes used throughout the application
+   * These values can be used to create a consistent typography
+   */
+
+  --ff-quicksand: "Quicksand", serif; /* The font family used for the application */
+
+  --fs-1: 2.6rem; /* The largest font size used in the application */
+  --fs-2: 2.2rem; /* A large font size used in the application */
+  --fs-3: 1.8rem; /* A medium-large font size used in the application */
+  --fs-4: 1.4rem; /* A medium font size used in the application */
+  --fs-5: 1.2rem; /* A small font size used in the application */
+
+  --fw-500: 500; /* A medium font weight used in the application */
+
+  /**
+   * Radius
+   * 
+   * Define border-radius values used throughout the application
+   * These values can be used to create rounded corners for elements
+   */
+
+  --radius-4: 4px; /* Small border radius for slightly rounded corners */
+  --radius-5: 5px; /* Medium border radius for moderately rounded corners */
+  --radius-10: 10px; /* Larger border radius for more pronounced rounded corners */
+
+  /**
+    * Shadow
+    * 
+    * Define box-shadow values used for adding depth to elements
+    * These shadows can enhance the visual hierarchy and aesthetics
+    */
+
+  --shadow-1: 0 0 5px hsla(0, 0%, 0%, 0.05); /* A subtle shadow for a soft effect */
+  --shadow-2: 0 0 10px hsla(0, 0%, 0%, 0.05); /* A slightly stronger shadow for more depth */
+
+  /**
+    * Transition
+    * 
+    * Define transition properties for smooth animations
+    * These values can be applied to elements for a polished user experience
+    */
+
+  --transition: 0.15s ease; /* A standard transition duration and easing function */
+  --cubic-out: cubic-bezier(
+    0.05,
+    0.65,
+    0.25,
+    1
+  ); /* A custom cubic-bezier easing for specific animations */
+}
+
+/* Reset Style */
+/* 
+   A CSS reset to ensure consistent styling across different browsers.
+   It removes default margins and paddings, and sets box-sizing to border-box 
+   for all elements.
+*/
+*,
+*::before,
+*::after {
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+/* 
+   Remove default list style for list items 
+   to ensure a clean look for unordered and ordered lists.
+*/
+li {
+  list-style: none; /* No bullet points for list items */
+}
+
+/* 
+   Style for anchor tags 
+   to remove underlines and inherit color from parent elements.
+*/
+a {
+  text-decoration: none; /* Remove underline from links */
+  color: inherit; /* Inherit color from parent element */
+}
+
+/* 
+   Set display property to block for various elements 
+   to allow for easier layout control.
+*/
+a,
+img,
+span,
+input,
+label,
+button,
+strong,
+ion-icon {
+  display: block; /* Make these elements block-level for layout purposes */
+}
+
+/* 
+   Ensure images maintain their aspect ratio 
+   while fitting within their container.
+*/
+img {
+  height: auto; /* Maintain aspect ratio of images */
+}
+
+/* 
+   Reset styles for input fields and buttons 
+   to remove default background and border styles.
+*/
+input,
+button {
+  background: none; /* Remove default background */
+  border: none; /* Remove default border */
+  font: inherit; /* Inherit font styles from parent */
+}
+
+/* 
+   Set width for input fields to fill the container.
+*/
+input {
+  width: 100%; /* Full width for input fields */
+}
+
+/* 
+   Change cursor style for buttons to indicate they are clickable.
+*/
+button {
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+/* 
+   Set font weight for strong elements to normal 
+   to avoid default bold styling.
+*/
+strong {
+  font-weight: normal; /* Normal font weight for strong elements */
+}
+
+/* 
+   Prevent pointer events on ion-icon elements 
+   to ensure they don't interfere with other clickable elements.
+*/
+ion-icon {
+  pointer-events: none; /* Disable pointer events for ion-icons */
+}
+
+/* 
+   Base styles for the HTML element 
+   including font family, font size, and smooth scrolling behavior.
+*/
+html {
+  font-family: var(
+    --ff-quicksand
+  ); /* Use Roboto font defined in CSS variables */
+  font-size: 10px; /* Set base font size */
+  scroll-behavior: smooth; /* Enable smooth scrolling for anchor links */
+}
+
+/* 
+   Base styles for the body element 
+   including background, text color, font size, layout, and opacity.
+*/
+body {
+  background-image: var(
+    --theme-bg
+  ); /* Use theme background gradient defined in CSS variables */
+  color: var(--eerie-black); /* Set text color */
+  font-size: 1.6rem; /* Set base font size for body text */
+  min-height: 100vh; /* Ensure body takes at least full viewport height */
+  padding-block: 30px; /* Vertical padding for body */
+  display: grid; /* Use grid layout for body */
+  grid-template-columns: 1fr; /* Single column layout */
+  overflow: hidden; /* Hide overflow content */
+  opacity: 0; /* Start with zero opacity for fade-in effect */
+}
+
+/* 
+   Styles for the body element when it has the class 'loaded'.
+   This class is typically added after the page has fully loaded.
+   It transitions the opacity from 0 to 1 for a fade-in effect.
+*/
+body.loaded {
+  opacity: 1; /* Fully opaque when the body has the 'loaded' class */
+  transition: 0.3s ease; /* Smooth transition for the opacity change over 0.3 seconds */
+}
+
+/* 
+   Styles for elements that are focused and visible.
+   This pseudo-class is used to apply styles only when the element is focused 
+   and is visible on the screen (not hidden by display: none or visibility: hidden).
+*/
+:focus-visible {
+  outline-offset: 4px; /* Offset the focus outline by 4px for better visibility */
+}
+
+/* 
+   Styles for focused elements when they are also active (being clicked).
+   This provides a visual cue for users when they interact with focused elements.
+*/
+:focus-visible:active {
+  outline-offset: 2px; /* Reduce the outline offset to 2px when the element is active */
+}
+
+/*-----------------------------------*\
+  #REUSED STYLE
+\*-----------------------------------*/
+
+/* 
+   Container styles for elements with the class 'container'.
+   This adds horizontal padding to ensure content does not touch the edges.
+*/
+.container {
+  padding-inline: 20px; /* Horizontal padding of 20px on both left and right sides */
+}
+
+/* 
+   Ensure that the 'container', 'main', and 'app-box' classes have a height of 100%.
+   This is useful for full-height layouts where child elements should stretch to fill the parent.
+*/
+.container,
+.main,
+.app-box {
+  height: 100%; /* Set height to 100% of the parent element */
+}
+
+/* 
+   Styles for heading elements with classes 'h1' and 'h2'.
+   These classes apply a specific font weight to the headings for consistency.
+*/
+.h1,
+.h2 {
+  font-weight: var(
+    --fw-500
+  ); /* Set font weight to a medium value defined in CSS variables */
+}
+
+/* 
+   Specific styles for the 'h1' class.
+   This sets the font size using a variable for consistency and easy adjustments.
+*/
+.h1 {
+  font-size: var(--fs-1); /* Font size for h1 defined in CSS variables */
+}
+
+/* 
+   Specific styles for the 'h2' class.
+   This sets the font size using a variable for consistency and easy adjustments.
+*/
+.h2 {
+  font-size: var(--fs-3); /* Font size for h2 defined in CSS variables */
+}
+
+/* Header section styles */
+
+/* 
+   Positioning for the app box to allow for layering with z-index.
+*/
+.app-box {
+  position: relative; /* Allows child elements to be positioned absolutely */
+  z-index: 1; /* Sets stacking order */
+}
+
+/* 
+   Flexbox layout for header to align items properly.
+*/
+.header {
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space items evenly */
+  align-items: flex-start; /* Align items at the start */
+}
+
+/* 
+   Title styles within the header.
+*/
+.header-title {
+  color: var(--white-1); /* Text color for header title */
+  margin-block-end: 5px; /* Margin below the title */
+}
+
+/* 
+   Time display styles within the header.
+*/
+.header-time {
+  color: var(--white-1); /* Text color for time */
+  font-size: var(--fs-5); /* Font size for time */
+}
+
+/* 
+   Wrapper for dropdown menu positioning.
+*/
+.dropdown-wrapper {
+  position: relative; /* Relative positioning for dropdown */
+}
+
+/* 
+   Button styles for menu button.
+*/
+.menu-btn {
+  color: var(--white-1); /* Text color for menu button */
+  font-size: 16px; /* Font size for button */
+  padding: 6px; /* Padding around button */
+  border-radius: var(--radius-5); /* Rounded corners */
+}
+
+/* 
+   Hover and focus styles for the menu button.
+*/
+.menu-btn:is(:hover, :focus) {
+  background-color: var(--white_40); /* Background change on hover/focus */
+}
+
+/* 
+   Dropdown container positioning and initial visibility.
+*/
+.dropdown-container {
+  position: absolute; /* Absolute positioning for dropdown */
+  top: calc(100% + 5px); /* Position below the button */
+  right: 0; /* Align to the right */
+  width: 200px; /* Fixed width for dropdown */
+  overflow: hidden; /* Hide overflow content */
+  z-index: 3; /* Higher stacking order */
+  visibility: hidden; /* Initially hidden */
+}
+
+/* 
+   Styles for active dropdown container to make it visible.
+*/
+.dropdown-container.active {
+  visibility: visible; /* Show dropdown when active */
+}
+
+/* 
+   Dropdown list styles.
+*/
+.dropdown-list {
+  background-color: var(--white-1); /* Background color for dropdown */
+  border-radius: var(--radius-5); /* Rounded corners */
+  transform: translateY(-50%); /* Initial position for animation */
+  box-shadow: var(--shadow-2); /* Shadow effect */
+  transition: none; /* No transition by default */
+}
+
+/* 
+   Transition styles for the dropdown list when active.
+*/
+.dropdown-container.active .dropdown-list {
+  transform: translateY(0); /* Reset position for dropdown */
+  transition: 0.5s var(--cubic-out); /* Smooth transition */
+  transition-delay: 0.25s; /* Delay before transition starts */
+}
+
+/* 
+   Styles for individual dropdown items.
+*/
+.dropdown-item {
+  padding: 15px; /* Padding for dropdown items */
+}
+
+/* 
+   Item title styles within the dropdown.
+*/
+.item-title {
+  color: var(--black); /* Text color for item title */
+  font-size: var(--fs-4); /* Font size for item title */
+  margin-block-end: 15px; /* Margin below item title */
+}
+
+/* 
+   Grid layout for theme button group.
+*/
+.theme-btn-group {
+  display: grid; /* Use grid layout */
+  grid-template-columns: repeat(4, 1fr); /* Four equal columns */
+  gap: 12px; /* Gap between grid items */
+}
+
+/* Theme button styles */
+
+/* 
+   Background gradient for the theme button, using HSL color values.
+   The gradient transitions from a lighter to a darker shade.
+*/
+.theme-btn {
+  background-image: linear-gradient(
+    to bottom,
+    hsl(var(--hue, 227), 40%, 50%),
+    /* Starting color */ hsl(var(--hue, 227), 40%, 60%) /* Ending color */
+  );
+  width: 100%; /* Full width of the parent container */
+  aspect-ratio: 1 / 1; /* Maintains a square shape */
+  outline: 2px solid transparent; /* Initial outline set to transparent */
+  outline-offset: 2px; /* Space between the outline and the button */
+}
+
+/* 
+   Outline color change on hover or focus for the theme button.
+*/
+.theme-btn:is(:hover, :focus) {
+  outline-color: var(
+    --cultured-1
+  ); /* Change outline color when hovered/focused */
+}
+
+/* 
+   Outline color for the active state of the theme button.
+*/
+.theme-btn.active {
+  outline-color: var(--slimy-green); /* Change outline color when active */
+}
+
+/* 
+   Scale down the button slightly when it is active (clicked).
+*/
+.theme-btn:active {
+  transform: scale(0.98); /* Slightly reduce size for active feedback */
+}
+
+/* Dropdown link styles */
+
+/* 
+   Styles for dropdown links, ensuring full width and flex alignment.
+*/
+.dropdown-link {
+  width: 100%; /* Full width of the parent container */
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Center items vertically */
+  gap: 15px; /* Space between items */
+  padding: 12px 15px; /* Padding inside the dropdown link */
+}
+
+/* 
+   Background color change on hover or focus for dropdown links.
+*/
+.dropdown-link:is(:hover, :focus) {
+  background-color: var(
+    --black_05
+  ); /* Change background color when hovered/focused */
+}
+
+/* 
+   Custom background color for dropdown link when active (clicked).
+*/
+.dropdown-link:active {
+  --black_05: hsla(
+    0,
+    0%,
+    0%,
+    0.1
+  ); /* Set a light transparent background on active */
+}
+
+/* 
+   Icon styles within the dropdown link.
+*/
+.dropdown-link ion-icon {
+  color: var(--dim-gray); /* Color for the icon */
+  font-size: 20px; /* Font size for the icon */
+}
+
+/* 
+   Span styles within the dropdown link.
+*/
+.dropdown-link .span {
+  color: var(--eerie-black); /* Text color for the span */
+  font-size: var(--fs-4); /* Font size for the span */
+}
+
+/* Main Section Styles */
+
+/* 
+   Wrapper for the title, centered using absolute positioning and transform.
+*/
+.title-wrapper {
+  position: absolute; /* Positioning relative to the nearest positioned ancestor */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust for element's own dimensions */
+  min-width: max-content; /* Minimum width based on content */
+  user-select: none; /* Prevent text selection */
+  z-index: -1; /* Behind other content */
+}
+
+/* 
+   Hide the title wrapper by setting opacity to 0.
+*/
+.title-wrapper.hide {
+  opacity: 0; /* Fully transparent */
+}
+
+/* 
+   Image styles within the title wrapper.
+*/
+.title-wrapper .img {
+  width: 200px; /* Fixed width for the image */
+  margin-inline: auto; /* Center horizontally */
+  margin-block-end: 10px; /* Space below the image */
+}
+
+/* 
+   Styles for the h2 element within the title wrapper.
+*/
+.title-wrapper .h2 {
+  color: var(--white-1); /* Text color for the heading */
+  text-align: center; /* Center text alignment */
+}
+
+/* 
+   Styles for the task list, managing overflow and spacing.
+*/
+.task-list {
+  margin-block: 20px; /* Vertical margin */
+  max-height: calc(
+    100vh - 200px
+  ); /* Maximum height with viewport consideration */
+  padding-inline-end: 4px; /* Padding on the right */
+  margin-inline-end: -4px; /* Negative margin to adjust layout */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+/* 
+   Custom scrollbar styles for the task list.
+*/
+.task-list::-webkit-scrollbar {
+  width: 2px; /* Width of the scrollbar */
+}
+
+.task-list::-webkit-scrollbar-thumb {
+  background-color: transparent; /* Initial thumb color */
+  border-radius: 5px; /* Rounded corners */
+}
+
+/* 
+   Thumb color change on hover or focus within the task list.
+*/
+.task-list:is(:hover, :focus-within)::-webkit-scrollbar-thumb {
+  background-color: hsla(0, 0%, 0%, 0.5); /* Semi-transparent thumb */
+}
+
+/* 
+   Margin for task items except the last one.
+*/
+.task-item:not(:last-child) {
+  margin-block-end: 2px; /* Space below each task item */
+}
+
+/* 
+   Base styles for each task item.
+*/
+.task-item {
+  background-color: var(--cultured-1); /* Background color for task item */
+  display: flex; /* Flexbox layout */
+  justify-content: flex-start; /* Align items to the start */
+  align-items: flex-start; /* Align items to the start */
+  gap: 10px; /* Space between items */
+  padding: 14px 18px; /* Padding inside task item */
+  border-radius: var(--radius-4); /* Rounded corners */
+  user-select: none; /* Prevent text selection */
+}
+
+/* 
+   Background color change on hover or focus within task item.
+*/
+.task-item:is(:hover, :focus-within) {
+  background-color: var(--cultured-2); /* Change background color */
+}
+
+/* 
+   Scale down effect when the task item is active (clicked).
+*/
+.task-item:active {
+  transform: scale(0.99); /* Slightly reduce size */
+}
+
+/* 
+   Check icon styles within the task item.
+*/
+.task-item .check-icon {
+  --icon-color: var(--granite-gray); /* Default icon color */
+  --icon-opacity: 0; /* Initial opacity */
+
+  position: relative; /* Positioning for child elements */
+  width: 20px; /* Fixed width for the icon */
+  height: 20px; /* Fixed height for the icon */
+  border: 2px solid var(--granite-gray); /* Border color */
+  border-radius: 50%; /* Circular shape */
+}
+
+/* 
+   Change icon opacity on hover or focus of the item icon.
+*/
+.task-item .item-icon:is(:hover, :focus) .check-icon {
+  --icon-opacity: 1; /* Fully visible */
+}
+
+/* 
+   Change icon color and background when the item icon is active (clicked).
+*/
+.task-item .item-icon:active .check-icon {
+  --icon-color: var(--cultured-1); /* Change icon color */
+  background-color: var(--granite-gray); /* Background color on active */
+}
+
+/* 
+   Pseudo-elements for the check icon to create a check mark.
+   Each pseudo-element represents a part of the check mark.
+*/
+.task-item .check-icon::before,
+.task-item .check-icon::after {
+  content: ""; /* Empty content for the pseudo-elements */
+  position: absolute; /* Positioning relative to the check icon */
+  width: 9px; /* Width of the check mark part */
+  height: 2px; /* Height of the check mark part */
+  border-radius: 5px; /* Rounded corners for a smoother appearance */
+  background-color: var(
+    --icon-color
+  ); /* Color of the check mark, based on icon color variable */
+  opacity: var(
+    --icon-opacity
+  ); /* Opacity of the check mark, controlled by the icon opacity variable */
+}
+/* 
+   Width and rotation for the first part of the check mark.
+*/
+.task-item .check-icon::before {
+  width: 6px; /* Width of the check mark line */
+  transform: rotate(45deg); /* Angle for the check mark */
+  top: 8px; /* Vertical position */
+  left: 2px; /* Horizontal position */
+}
+
+/* 
+   Rotation for the second part of the check mark.
+*/
+.task-item .check-icon::after {
+  transform: rotate(-45deg); /* Opposite angle for check mark */
+  top: 7px; /* Vertical position */
+  left: 5px; /* Horizontal position */
+}
+
+/* 
+   Styles for completed task check icon.
+*/
+.task-item.complete .check-icon {
+  background-color: var(--theme-color); /* Background color when completed */
+  border-color: var(--theme-color); /* Border color when completed */
+  --icon-color: var(--cultured-1); /* Change icon color */
+  --icon-opacity: 1; /* Fully visible */
+  animation: scale-up 0.2s ease forwards; /* Scale-up animation */
+}
+
+/* 
+   Keyframes for scale-up animation.
+*/
+@keyframes scale-up {
+  0% {
+    transform: scale(0.5); /* Start small */
+  }
+  100% {
+    transform: scale(1); /* End at full size */
+  }
+}
+
+/* 
+   Styles for task item text.
+*/
+.task-item .item-text {
+  font-size: var(--fs-4); /* Font size for text */
+  padding-block-start: 2px; /* Padding above text */
+}
+
+/* 
+   Styles for completed task text.
+*/
+.task-item.complete .item-text {
+  color: var(--granite-gray); /* Color for completed text */
+  text-decoration: line-through; /* Strikethrough effect */
+}
+
+/* 
+   Styles for action button in task item.
+*/
+.task-item .item-action-btn {
+  margin-inline-start: auto; /* Align to right */
+  color: var(--dim-gray); /* Default color */
+  opacity: 0; /* Initially hidden */
+}
+
+/* 
+   Show action button on hover or focus.
+*/
+.task-item:is(:hover, :focus-within) .item-action-btn {
+  opacity: 1; /* Make visible */
+}
+
+/* 
+   Change color of action button on hover or focus.
+*/
+.task-item .item-action-btn:is(:hover, :focus) {
+  color: var(--fuzzy-wuzzy); /* Change color */
+}
+
+/* 
+   Increase stroke width of icon on hover or focus.
+*/
+.task-item .item-action-btn:is(:hover, :focus) ion-icon {
+  --ionicon-stroke-width: 50px; /* Increase stroke width */
+}
+
+/* 
+   Input wrapper positioned at the bottom.
+*/
+.input-wrapper {
+  position: absolute; /* Absolute positioning */
+  bottom: 0; /* Align to bottom */
+  left: 0; /* Align to left */
+  right: 0; /* Align to right */
+}
+
+/* 
+   Styles for input field.
+*/
+.input-field {
+  background-color: var(--white_70); /* Background color */
+  color: var(--eerie-black); /* Text color */
+  font-size: var(--fs-4); /* Font size */
+  padding: 14px; /* Padding inside */
+  padding-inline-start: 50px; /* Left padding */
+  box-shadow: var(--shadow-1); /* Shadow effect */
+  border-radius: var(--radius-4); /* Rounded corners */
+}
+
+/* 
+   Placeholder styles for input field.
+*/
+.input-field::placeholder {
+  color: var(--dim-gray); /* Placeholder color */
+  opacity: 0; /* Initially invisible */
+}
+
+/* 
+   Show placeholder on input focus.
+*/
+.input-field:focus::placeholder {
+  opacity: 1; /* Make visible */
+}
+/* 
+   Styles for input field on hover or focus.
+*/
+.input-field:is(:hover, :focus) {
+  background-color: var(--white_80); /* Change background color */
+  outline: none; /* Remove outline */
+}
+
+/* 
+   Positioning for input text and icon.
+*/
+.input-text,
+.input-icon {
+  position: absolute; /* Absolute positioning */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Adjust for vertical centering */
+}
+
+/* 
+   Styles for input text.
+*/
+.input-text {
+  left: 50px; /* Position from the left */
+  font-size: var(--fs-4); /* Font size */
+  pointer-events: none; /* Disable pointer events */
+}
+
+/* 
+   Styles for input icon.
+*/
+.input-icon {
+  left: 14px; /* Position from the left */
+  font-size: 26px; /* Font size */
+}
+
+/* 
+   Hide input text when input is focused or not empty.
+*/
+.input-field:is(:not(:placeholder-shown), :focus) ~ .input-text {
+  opacity: 0; /* Make invisible */
+}
+
+/* 
+   Styles for the circle icon within the input icon.
+*/
+.input-icon .circle-icon {
+  color: var(--davys-gray); /* Color of the circle icon */
+  --ionicon-stroke-width: 40px; /* Stroke width for the icon */
+}
+
+/* 
+   Hide add icon and circle icon based on focus state.
+*/
+.input-field:focus ~ .input-icon .add-icon,
+.input-field ~ .input-icon .circle-icon {
+  display: none; /* Hide icons */
+}
+
+/* 
+   Show add icon when input field is not focused.
+*/
+.input-field ~ .input-icon .add-icon,
+.input-field:focus ~ .input-icon .circle-icon {
+  display: block; /* Show add icon */
+}
+
+/* App Info Modal Styles*/
+
+/* 
+   Styles for the app info modal background.
+*/
+.app-info {
+  position: fixed; /* Fixed positioning */
+  top: 0; /* Align to top */
+  left: 0; /* Align to left */
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: var(--black_50); /* Semi-transparent background */
+  display: flex; /* Flexbox for centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  z-index: 4; /* Layering order */
+  opacity: 0; /* Initially invisible */
+  visibility: hidden; /* Hidden state */
+  transition: var(--transition); /* Transition effect */
+}
+
+/* 
+   Styles for active app info modal.
+*/
+.app-info.active {
+  opacity: 1; /* Fully visible */
+  visibility: visible; /* Show modal */
+}
+
+/* 
+   Styles for the modal itself.
+*/
+.modal {
+  background-color: var(--cultured-2); /* Background color */
+  padding: 20px; /* Padding inside */
+  padding-block-start: 30px; /* Top padding */
+  border-radius: var(--radius-5); /* Rounded corners */
+  max-width: 280px; /* Maximum width */
+  width: 100%; /* Full width */
+  transform: scale(1.1); /* Slightly enlarged */
+  transform-origin: bottom; /* Scaling origin */
+  transition: 0.15s var(--cubic-out); /* Transition effect */
+}
+
+/* 
+   Styles for active modal state.
+*/
+.app-info.active .modal {
+  transform: scale(1); /* Reset scale */
+  transition-duration: 0.4s; /* Longer transition for activation */
+}
+
+/* 
+   Styles for modal title.
+*/
+.modal-title {
+  font-size: var(--fs-2); /* Font size */
+  font-weight: var(--fw-500); /* Font weight */
+}
+
+/* 
+   Styles for modal list.
+*/
+.modal-list {
+  margin-block: 10px 30px; /* Vertical margins */
+}
+
+/* 
+   Styles for individual modal items.
+*/
+.modal-item {
+  font-size: var(--fs-4); /* Font size for items */
+}
+
+/* 
+   Margin for all modal items except the last one.
+*/
+.modal-item:not(:last-child) {
+  margin-block-end: 5px; /* Bottom margin */
+}
+
+/* 
+   Display inline for all direct children of modal items.
+*/
+.modal-item > * {
+  display: inline-block; /* Inline display */
+}
+
+/* 
+   Color for span elements within modal items.
+*/
+.modal-item .span {
+  color: var(--dim-gray); /* Text color */
+}
+
+/* 
+   Color for links styled as spans within modal items.
+*/
+.modal-item a.span {
+  color: var(--theme-color); /* Link color */
+}
+
+/* 
+   Styles for modal buttons.
+*/
+.modal-btn {
+  width: 100%; /* Full width */
+  min-height: 30px; /* Minimum height */
+  font-size: var(--fs-4); /* Font size */
+  background-color: var(--white-1); /* Background color */
+  color: var(--black); /* Text color */
+  border-radius: var(--radius-4); /* Rounded corners */
+  outline: 1px solid var(--cultured-1); /* Outline style */
+  box-shadow: 0 1.5px 1px var(--black_25); /* Shadow effect */
+}
+
+/* 
+   Button styles on hover or focus.
+*/
+.modal-btn:is(:hover, :focus) {
+  background-color: var(--white-2); /* Change background color */
+}
+
+/* 
+   Styles for button when active (clicked).
+*/
+.modal-btn:active {
+  color: var(--dim-gray); /* Change text color */
+  box-shadow: none; /* Remove shadow */
+}
+
+/* Media Queries */
+
+/* 
+   Responsive styles for screens larger than 550px.
+*/
+@media (min-width: 550px) {
+  /* 
+     Custom properties for typography.
+  */
+  :root {
+    --fs-1: 3rem; /* Font size 1 */
+    --fs-3: 2.2rem; /* Font size 3 */
+    --fs-5: 1.4rem; /* Font size 5 */
+  }
+
+  /* 
+     Styles for dropdown container.
+  */
+  .dropdown-container {
+    width: 280px; /* Set width */
+  }
+
+  /* 
+     Grid layout for theme button group.
+  */
+  .theme-btn-group {
+    grid-template-columns: repeat(5, 1fr); /* Five equal columns */
+  }
+
+  /* 
+     Styles for title image in main section.
+  */
+  .title-wrapper .img {
+    width: 250px; /* Set image width */
+  }
+}
+
+/**
+ * Responsive styles for screens larger than 768px.
+ */
+@media (min-width: 768px) {
+  /* 
+     Styles for Reused Classes.
+  */
+  .container {
+    max-width: 650px; /* Maximum width of the container */
+    width: 100%; /* Set width to 100% of its parent */
+    margin-inline: auto; /* Center the container horizontally */
+  }
+
+  /* Header */
+  .app-box {
+    background-color: var(
+      --white_10
+    ); /* Light background color for the header */
+    padding: 25px; /* Padding inside the header box */
+    border-radius: var(--radius-10); /* Rounded corners for the header box */
+  }
+
+  /* Main */
+  .task-list {
+    max-height: calc(
+      100vh - 250px
+    ); /* Limit height to viewport height minus 250px */
+  }
+
+  .input-wrapper {
+    bottom: 25px; /* Position the input wrapper 25px from the bottom */
+    left: 25px; /* Position the input wrapper 25px from the left */
+    right: 25px; /* Position the input wrapper 25px from the right */
+  }
+}

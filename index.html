@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 
+    Setting the title of the webpage, which appears in the browser's title bar 
+    and is also used by search engines as the title of the page in their results
+    -->
+    <title>TaskMaster</title>
+
+    <!-- 
+    Linking to the favicon, a small icon that represents the webpage 
+    and is displayed in the browser's address bar, bookmarks, and tabs
+    -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="/favicon/favicon-48x48.png"
+      sizes="48x48"
+    />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+
+    <link rel="shortcut icon" href="/favicon/favicon.ico" />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicon/apple-touch-icon.png"
+    />
+
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- 
+    Linking to the external stylesheet (CSS file) that defines the layout and visual styling of the webpage
+    -->
+    <link rel="stylesheet" href="/assets/css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Main content area of the application -->
+      <main class="main">
+        <!-- A box that represents the app's content -->
+        <article class="app-box">
+          <!-- Header section of the app box -->
+          <header class="header">
+            <div>
+              <!-- Main title of the application -->
+              <h1 class="h1 header-title">Today's Task</h1>
+
+              <!-- Paragraph displaying the current date -->
+              <p class="header-time" data-header-time></p>
+            </div>
+
+            <!-- Wrapper for the dropdown menu button -->
+            <div class="dropdown-wrapper">
+              <!-- Button to toggle the menu visibility -->
+              <button
+                class="menu-btn"
+                aria-label="Toggle menu"
+                data-menu-toggler
+              >
+                <!-- Icon representing the menu (three horizontal dots) -->
+                <ion-icon
+                  name="ellipsis-horizontal"
+                  aria-hidden="true"
+                ></ion-icon>
+              </button>
+
+              <div class="dropdown-container" data-menu>
+                <!-- Container for the dropdown menu, which holds the list of options -->
+                <ul class="dropdown-list">
+                  <!-- Unordered list for dropdown items -->
+                  <li class="dropdown-item">
+                    <!-- Individual item in the dropdown list -->
+                    <p class="item-title">Theme</p>
+                    <!-- Title for the theme selection section -->
+
+                    <div class="theme-btn-group">
+                      <!-- Group of buttons for theme selection -->
+                      <button
+                        class="theme-btn active"
+                        style="--hue: 31"
+                        data-theme-btn
+                        data-hue="31"
+                      ></button>
+
+                      <button
+                        class="theme-btn"
+                        style="--hue: 140"
+                        data-theme-btn
+                        data-hue="140"
+                      ></button>
+
+                      <button
+                        class="theme-btn"
+                        style="--hue: 120"
+                        data-theme-btn
+                        data-hue="120"
+                      ></button>
+
+                      <button
+                        class="theme-btn"
+                        style="--hue: 240"
+                        data-theme-btn
+                        data-hue="240"
+                      ></button>
+
+                      <button
+                        class="theme-btn"
+                        style="--hue: 350"
+                        data-theme-btn
+                        data-hue="350"
+                      ></button>
+
+                      <button
+                        class="theme-btn"
+                        style="--hue: 50"
+                        data-theme-btn
+                        data-hue="50"
+                      ></button>
+
+                      <button
+                        class="theme-btn"
+                        style="--hue: 20"
+                        data-theme-btn
+                        data-hue="20"
+                      ></button>
+
+                      <button
+                        class="theme-btn"
+                        style="--hue: 305"
+                        data-theme-btn
+                        data-hue="305"
+                      ></button>
+
+                      <button
+                        class="theme-btn"
+                        style="--hue: 207"
+                        data-theme-btn
+                        data-hue="207"
+                      ></button>
+
+                      <button
+                        class="theme-btn"
+                        style="--hue: 160"
+                        data-theme-btn
+                        data-hue="160"
+                      ></button>
+                    </div>
+                  </li>
+
+                  <li>
+                    <!-- Another list item for additional options -->
+                    <button
+                      class="dropdown-link"
+                      data-modal-toggler
+                      data-menu-toggler
+                    >
+                      <!-- Icon representing information -->
+                      <ion-icon name="information-circle-outline"></ion-icon>
+
+                      <!-- Text label for the button -->
+                      <span class="span">App info</span>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </header>
+
+          <!-- Main Section -->
+          <div class="title-wrapper" data-welcome-note>
+            <!-- Wrapper for the title and welcome note -->
+            <img
+              src="/assets/images/list-img.svg"
+              alt="calendar image"
+              class="img"
+            />
+
+            <h2 class="h2">
+              <!-- Main heading that welcomes the user -->
+              Welcome to TaskMaster: <br />
+              <!-- Line break for formatting -->
+              Organize, Complete, Succeed!
+            </h2>
+          </div>
+
+          <ul class="task-list" data-task-list>
+            <!-- Unordered list to display the tasks -->
+          </ul>
+
+          <div class="input-wrapper" title="Add a task in 'My Day'">
+            <!-- Wrapper for the input field to add tasks -->
+            <input
+              type="text"
+              name="task"
+              aria-label="Add task"
+              maxlength="100"
+              placeholder="Try typing 'Need to buy a 5-liter milk'"
+              class="input-field"
+              data-task-input
+            />
+
+            <span class="input-text">Add a task</span>
+            <!-- Text label indicating the purpose of the input field -->
+
+            <div class="input-icon">
+              <!-- Container for the icons associated with the input -->
+              <ion-icon
+                name="add-outline"
+                class="add-icon"
+                aria-hidden="true"
+              ></ion-icon>
+
+              <ion-icon
+                name="ellipse-outline"
+                class="circle-icon"
+                aria-hidden="true"
+              ></ion-icon>
+            </div>
+          </div>
+        </article>
+
+        <div class="app-info" data-info-modal>
+          <!-- Container for the app info modal, which displays information about the application -->
+          <div class="modal">
+            <!-- Inner div representing the modal itself -->
+            <h2 class="modal-title">App info</h2>
+            <!-- Title of the modal indicating that it contains app information -->
+
+            <ul class="modal-list">
+              <!-- Unordered list to display various pieces of information about the app -->
+              <li class="modal-item">
+                <!-- Individual item in the modal list -->
+                <strong class="strong">Version:</strong>
+                <!-- Strong text indicating the label for the version -->
+                <span class="span">1.0</span>
+                <!-- Span displaying the version number of the app -->
+              </li>
+
+              <li class="modal-item">
+                <!-- Another item in the modal list -->
+                <strong class="strong">Published On:</strong>
+                <!-- Strong text indicating the label for the publish date -->
+                <span class="span">23 October 2024</span>
+                <!-- Span displaying the publish date of the app -->
+              </li>
+
+              <li class="modal-item">
+                <!-- Another item in the modal list -->
+                <strong class="strong">Last Update:</strong>
+                <!-- Strong text indicating the label for the last update date -->
+                <span class="span">23 October 2024</span>
+                <!-- Span displaying the last update date of the app -->
+              </li>
+
+              <li class="modal-item">
+                <!-- Another item in the modal list -->
+                <strong class="strong">Created by:</strong>
+                <!-- Strong text indicating the label for the creator -->
+                <a
+                  href="https://www.linkedin.com/in/sudhanshu-shekhar-jha-799174285/"
+                  target="_blank"
+                  class="span"
+                >
+                  Sudhanshu Jha
+                </a>
+                <!-- Link to the creator's Linkedin profile -->
+              </li>
+            </ul>
+
+            <button class="modal-btn" data-modal-toggler>Ok</button>
+            <!-- Button to close the modal, toggling its visibility -->
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- Script to include the custom JavaScript file -->
+    <script src="/script.js"></script>
+
+    <!-- 
+    Importing the Ionicons library as a module for modern browsers 
+    This allows the use of Ionicons icons in the application
+    -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+
+    <!-- 
+    Importing the Ionicons library for older browsers that do not support modules 
+    This ensures compatibility with a wider range of browsers
+    -->
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
