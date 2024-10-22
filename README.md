@@ -86,7 +86,7 @@ To run TaskMaster locally, follow these steps:
 
 ## Screenshots
 
-![Screenshot 2024-10-23 003400](https://github.com/user-attachments/assets/971abcef-e438-4061-959c-b8242c6e2dc6)
+![Screenshot 2024-10-23 003400](https://github.com/user-attachments/assets/971abcef-e438-4061-959c-b8242c6e2dc6)  ![Screenshot 2024-10-23 003609](https://github.com/user-attachments/assets/e0a6fd6e-9591-4f48-b48c-92127e3ba841)
 
 ## Contributing
 
