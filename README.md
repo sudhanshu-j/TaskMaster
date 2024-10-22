@@ -54,7 +54,7 @@ To run TaskMaster locally, follow these steps:
 
 1. **Adding Tasks:**
 
-    - Type your task into the input field and press Enter or click the "Add Task" button.
+    - Type your task into the input field and press Enter.
 
 3. **Marking Tasks as Completed:**
 
@@ -86,7 +86,7 @@ To run TaskMaster locally, follow these steps:
 
 ## Screenshots
 
-
+![Screenshot 2024-10-23 003400](https://github.com/user-attachments/assets/971abcef-e438-4061-959c-b8242c6e2dc6)
 
 ## Contributing
 
